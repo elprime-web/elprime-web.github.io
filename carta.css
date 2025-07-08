@@ -215,17 +215,19 @@ p{
 .notificacion {
   position: fixed;
   bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
   background-color: #444;
   color: white;
-  padding: 12px;
+  padding: 12px 20px;
   border-radius: 10px;
   font-size: 1rem;
   box-shadow: 0 0 10px #00000055;
   opacity: 0;
   transition: opacity 0.5s ease;
   z-index: 9999;
-  width: 13%;
-  margin-left: 1120px;
+  max-width: 90%;
+  text-align: center;
 }
 
 .notificacion.visible {
