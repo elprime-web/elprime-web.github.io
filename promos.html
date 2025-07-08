@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="promos.css">
+    <link rel="icon" href="fondo.jpg" type="image/png">
+    <title>El Rincon de las Delicias</title>
+</head>
+<body>
+    <div class="Volver">
+    <a href="index.html">Volver</a>
+    </div>
+    <h1>🍽️Nuestras Promos</h1>
+
+        <h2>LOMITO ESPECIAL</h2>
+    <div class="contenido">
+        • 2 X <span>$24800</span> <button onclick="agregarAlCarrito('Lomito Especial 2 x $24800')" class="agregar">Agregar</button></div>
+
+
+    
+        <h2>HAMBURGUESA ESPECIAL</h2>
+        <div class="contenido">• 2 X <span>$19800</span> <button onclick="agregarAlCarrito('Hamburguesa Especial 2 x $19800')" class="agregar">Agregar</button></div>
+    
+
+    
+        <h2>SANDWICH DE MILANESA</h2>
+        <div class="contenido">• 2 X <span>$23800</span> <button onclick="agregarAlCarrito('Sandwich de Milanesa 2 x $23800')" class="agregar">Agregar</button></div>
+
+
+
+     <button id="ver-carrito" onclick="mostrarCarrito()">Ver carrito</button>
+
+  <div id="modal-carrito" class="modal oculto">
+    <div class="modal-contenido">
+      <span class="cerrar" onclick="cerrarCarrito()">&times;</span>
+      <h2 class="tupedido">Tu pedido:</h2>
+      <ul id="lista-carrito"></ul>
+      <button id="whatsapp" onclick="enviarWhatsApp()">Enviar por WhatsApp</button>
+    </div>
+  </div>
+  <div id="notificacion" class="notificacion oculto">Producto agregado al carrito</div>
+
+  <script src="carrito.js"></script>
+</body>
+</html>

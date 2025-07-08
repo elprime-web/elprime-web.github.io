@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="menudiario.css">
+  <link rel="icon" href="fondo.jpg" type="image/jpg"> 
+  <title>El Rincón de las Delicias</title>
+</head>
+<body>
+  <div class="Volver">
+    <a href="index.html">Volver</a>
+  </div>
+
+  <section id="menu-diario">
+    <h1>🍽️ Menú del Día</h1>
+    <div id="contenido-menu">
+      <p class="cargando">Cargando menú...</p>
+    </div>
+  </section>
+
+  <button id="ver-carrito" onclick="mostrarCarrito()"  class="ver-carrito">Ver carrito</button>
+
+  <div id="modal-carrito" class="modal oculto">
+    <div class="modal-contenido">
+      <span class="cerrar" onclick="cerrarCarrito()">&times;</span>
+      <h2 class="tupedido">Tu pedido:</h2>
+      <ul id="lista-carrito"></ul>
+      <button id="whatsapp" onclick="enviarWhatsApp()">Enviar por WhatsApp</button>
+    </div>
+  </div>
+<div id="notificacion" class="notificacion oculto">Producto agregado al carrito</div>
+
+  <!-- Siempre cargá los scripts al final del body -->
+  <script src="carrito.js"></script>
+  <script src="menudiario.js"></script>
+</body>
+</html>

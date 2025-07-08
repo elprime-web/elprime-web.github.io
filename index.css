@@ -1,0 +1,89 @@
+body{
+    background-image: url(fondo.jpg) ;
+    background-attachment: fixed;
+    box-sizing: border-box;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* opacidad negra */
+    z-index: -1;
+}
+
+
+h1{
+    color: #f39c12;
+    text-align: center;
+    text-shadow: 0 0 20px #f39c12;
+
+}
+
+.card-carta{
+    background-color: #f1f1f1;
+    padding: 30px;
+    border: none;
+    border-radius: 0.7rem;
+    margin: auto;
+    margin-top: 100px;
+    box-shadow: 0 0 12px 0 #c4bfb7;
+    width: 70%;
+}
+
+.enlace-carta{
+    background-color: black;
+    border-radius: 0.7rem;
+    font-size: 2rem;
+    padding: 10px;
+    text-align: center;
+    width: 50%;
+    margin: auto;
+}
+
+a{
+    color: #f39c12;
+    text-decoration: none;
+    font-family: sans-serif;
+}
+
+.card-promos{
+    background-color: #f1f1f1;
+    padding: 30px;
+    border: none;
+    border-radius: 0.7rem;
+    margin: auto;
+    margin-top: 50px;
+    box-shadow: 0 0 12px 0 #c4bfb7;
+    width: 70%;
+}
+
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+    width: 100%;
+    text-align: center;
+  }
+
+  .card-carta,
+  .card-promos {
+    width: 75%;
+    margin-top: 40px;
+    padding: 20px;
+  }
+
+  .enlace-carta {
+    width: 95%;
+    font-size: 1.5rem;
+    padding: 8px;
+  }
+
+  a {
+    display: block;
+    text-align: center;
+  }
+}

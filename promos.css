@@ -1,0 +1,278 @@
+body{
+    background-image: url(fondo.jpg);
+    background-attachment: fixed;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* opacidad negra */
+    z-index: -1;
+}
+
+
+
+
+h1{
+    width: 50%;
+    margin: auto;
+    color: #f39c12;
+    text-shadow: 0 0 20px #f1c40f;
+    margin-bottom: 100px;
+    margin-top: 100px;
+    text-align: center;
+    font-size: 3rem;
+}
+
+h2{
+    text-shadow: 0 0 25px #f1c40f;
+    font-weight: 400;
+    border-bottom: 1px solid #f1f1f1; 
+    margin-left: 1rem;
+    padding: 5px 10px;
+    color: #f39c12;
+    font-size: 1.7rem;
+}
+
+.contenido{
+    padding: 20px;
+    font-size: 2.5rem;
+    color: #f1f1f1;
+    font-weight: bold;
+    margin-left: 12px;
+    text-shadow: 0 0 20px #c4bfb7;
+}
+
+
+.Volver {
+    width: fit-content;
+    margin: 30px;
+    background-color: #f39c12;
+    padding: 8px 15px;
+    border-radius: 50px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.Volver:hover {
+    background-color: #d35400;
+}
+
+
+.agregar{
+    margin-left: 12px;
+    padding: 8px 14px;
+    background-color: #f39c12;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.3s;
+}
+
+.agregar:hover {
+    background-color: #d35400;
+}
+
+
+#ver-carrito {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #f39c12;
+    color: white;
+    padding: 14px 22px;
+    border: none;
+    border-radius: 50px;
+    font-size: 1rem;
+    box-shadow: 0 0 10px #00000088;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+#ver-carrito:hover {
+    background-color: #d35400;
+}
+
+/* Modal del carrito */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+}
+
+.modal-contenido {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 500px;
+    position: relative;
+    box-shadow: 0 0 15px #000;
+    max-height: 90vh;
+    overflow-y: auto;
+    margin: auto;
+}
+
+.cerrar {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.oculto {
+    display: none;
+}
+
+#lista-carrito .item-carrito {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.2rem;
+  color: #333;
+  line-height: normal;
+  margin: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+/* Botón WhatsApp */
+#whatsapp {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #25D366;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+#whatsapp:hover {
+    background-color: #1ebe5d;
+}
+
+
+
+.notificacion {
+  position: fixed;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #444;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 10px;
+  font-size: 1rem;
+  box-shadow: 0 0 10px #00000055;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  z-index: 9999;
+  max-width: 90%;
+  text-align: center;
+}
+
+
+.notificacion.visible {
+  opacity: 1;
+}
+
+.oculto {
+  display: none;
+}
+
+.tupedido{
+    color: #444;
+    text-shadow: none;
+}
+
+.btn-eliminar {
+  background-color: transparent;
+  border: none;
+  color: red;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-left: 12px;
+  align-self: center;
+}
+
+
+.listovich{
+  color: #444;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+
+
+
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.2rem;
+    width: 90%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+
+  .card-promos {
+    width: 85%;
+    padding: 20px;
+  }
+
+  .contenido {
+    font-size: 1.7rem;
+    padding: 10px;
+    flex-direction: column;
+  }
+
+  .contenido button {
+    width: 50%;
+    padding: 8px;
+  }
+
+  #ver-carrito {
+    bottom: 15px;
+    right: 15px;
+    padding: 12px 18px;
+    font-size: 0.9rem;
+  }
+
+  .modal-contenido {
+    width: 80%;
+    padding: 15px;
+  }
+
+  #whatsapp {
+    width: 70%;
+    padding: 12px;
+  }
+
+  .Volver {
+    margin: 15px;
+    padding: 6px 12px;
+  }
+}
+
